@@ -1,12 +1,12 @@
 # README-demo
 
-# ‘Pseudo-labeling with keyword refining for few-supervised video captioning’
+# **Pseudo-labeling with keyword refining for few-supervised video captioning**
 
-This is official pytorch implementation of Pseudo-labeling with keyword refining for few-supervised video captioning. The pdf can be downloaded from here
+This is an official PyTorch implementation of PR'25 paper titled **Pseudo-labeling with keyword refining for few-supervised video captioning**. The pdf can be downloaded from [here](https://arxiv.org/abs/2411.04059)
 
 ## **Abstract**
 
-Video captioning aims to generate one sentence that describes the video content. Existing methods always require a number of captions (e.g.10 or 20) per video to train the model, which is quite costly due to the expensive human labeling. To reduce the labeling cost, we explore the possibility of using only one ground-truth sentences to train the model, and introduce a new task named few-supervised video captioning To fulfil the task, we strive to generate high-quality pseudo-labeled sentences to augment supervision information, such that the generalization ability of the model is improved. In particular, we propose one few-supervised video captioning framework that expands supervision knowledge by generating promising pseudo labels.Unlike random sampling in natural language processing that may cause invalid modifications (i.e.,edit words), we adopt a two-step strategy in lexically constrained sentence generation, which guides the model to edit words using some actions (e.g., copy, substitute,delete,and insert)by pre-trained label classifier, and fine-tunes generated sentences by pre-trained language model. Moreover,to minimize the inconsistency between pseudo-labeled sentences and video content, we select sentences by video-text retrieval,and design transformer-based caption generation module with gated video-keyword semantic fusion,which filters out irrelevant words in semantic cues and infers relevant words by visual cues.In addition,to reduce word repetitions,we adopt a repetitive penalized sampling method to encourage the model to yield concise pseudo-labeled sentences with less repeated words. Extensive experiments on several benchmarks have demonstrated the advantages of the proposed approach for few-supervised video captioning.
+Video captioning aims to generate one sentence that describes the video content. Existing methods always require a number of captions (e.g.10 or 20) per video to train the model, which is quite costly due to the expensive human labeling. To reduce the labeling cost, we explore the possibility of using only one ground-truth sentences to train the model, and introduce a new task named few-supervised video captioning To fulfil the task, we strive to generate high-quality pseudo-labeled sentences to augment supervision information, such that the generalization ability of the model is improved. In particular, we propose one few-supervised video captioning framework that expands supervision knowledge by generating promising pseudo labels.Unlike random sampling in natural language processing that may cause invalid modifications (i.e., edit words), we adopt a two-step strategy in lexically constrained sentence generation, which guides the model to edit words using some actions (e.g., copy, substitute,delete,and insert)by pre-trained label classifier, and fine-tunes generated sentences by pre-trained language model. Moreover,to minimize the inconsistency between pseudo-labeled sentences and video content, we select sentences by video-text retrieval,and design transformer-based caption generation module with gated video-keyword semantic fusion,which filters out irrelevant words in semantic cues and infers relevant words by visual cues.In addition,to reduce word repetitions,we adopt a repetitive penalized sampling method to encourage the model to yield concise pseudo-labeled sentences with less repeated words. Extensive experiments on several benchmarks have demonstrated the advantages of the proposed approach for few-supervised video captioning.
 
 ## **Requirements**
 
@@ -230,15 +230,16 @@ If you find this project helpful, Please also cite codebases above.
 
 If you find this repo useful, please cite the following paper.
 ```
-@article{li2025vidcaption,
-      title={Adversarial Attacks on Video Object Segmentation with Hard Region Discovery}, 
+@article{li-pr2025-vidcaption,
+      title={Pseudo-labeling with keyword refining for few-supervised video captioning}, 
       author={Ping Li and Tao Wang and Xinkui Zhao and Xianghua Xu and Mingli Song},
       year={2025},
-      journal ={2309.13857},
-      year = {2025},
-      doi = {}
+      volume = {159},
+      journal ={Pattern Recognition (PR)},
+      page = {111176},
+      doi = {10.1016/j.patcog.2024.111176}
 }
 ```
 ## Contact:
 
-Please drop me an email for any problems or discussion: wangtao000213@hdu.edu.cn
+If you have any problems about this project, please deliver an email to Mr. Wang Tao: wangtao000213@hdu.edu.cn.
